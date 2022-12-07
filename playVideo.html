@@ -1,0 +1,212 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <nav class="flex-div">
+        <div class="nav-left flex-div">
+            <img src="images/menu-icon.png" alt="" class="menu-icon">
+            <a href="index.html" class="logo flex-div">
+                <i class="fa-2x fa-brands fa-youtube"></i>
+                <h1>Youtube<sup>NG</sup></h1>
+            </a>
+        </div>
+        <div class="nav-middle flex-div">
+            <div class="search-box flex-div">
+                <input type="text" placeholder="Search">
+                <img src="images/search.png" alt="">
+            </div>
+            <img src="images/voice-search.png" alt="" class="mic-icon">
+        </div>
+        <div class="nav-right flex-div">
+            <img src="images/upload.png" alt="">
+            <div class="notification">
+                <img src="images/notification.png" alt="">
+                <div class="badge">3</div>
+            </div>
+            <img src="images/simon.png" alt="" class="user-icon">
+        </div>
+    </nav>
+
+    <!-- ----------main---------- -->
+    <div class="container play-container">
+        <div class="row">
+            <div class="play-video">
+                <video controls autoplay muted>
+                    <source src="images/video.mp4" type="video/mp4">
+                </video>
+                <div class="tags">
+                    <a href="">#coding</a>
+                    <a href="">#HTML</a>
+                    <a href="">#CSS</a>
+                    <a href="">#JAVASCRIPT</a>
+                </div>
+                <h3>Richcodes Tutorial for fullstack web development</h3>
+                <div class="play-video-info">
+                    <div class="flex-div publisher">
+                        <a href=""><img src="images/simon.png" alt="" class="channelImg"></a>
+                        <div class="channelInfo">
+                            <a href="">Richcode Tutorial</a>
+                            <p>700 subscribers</p>
+                        </div>
+                        <button class=" btn join-btn">join</button>
+                        <button class="btn subscribe-btn">subscribe</button>
+                        <i class="fa-regular fa-bell"></i>
+                    </div>
+                    <div class="userActions">
+                        <div class="btnHolder">
+                            <button class="btn likeBtn"><img src="images/like.png" alt=""><span>10k</span></button>
+                            <button class="btn dislikeBtn"><img src="images/dislike.png" alt=""></button>
+                        </div>
+                        <button class="btn shareBtn"><img src="images/share.png" alt=""><span>share</span></button>
+                        <div class="icons"><i class="fa-solid fa-ellipsis"></i></div>
+                    </div>
+                </div>
+                <div class="video-description">
+                    <p><span>334k views</span> <span>1 year ago</span></p>
+                    <p>
+                        Learn How To Make A Website Like YouTube Using HTML, CSS And JavaScript |
+                        Video Sharing Website Design Front-end, Step by step tutorial
+                    </p>
+                    <a href="">Show more</a>
+                </div>
+                <div class="comments">
+                    <h4>500 comments</h4>
+                    <div class="add-comment">
+                        <img src="images/Jack.png" alt="">
+                        <input type="text" placeholder="write comments...">
+                    </div>
+                    <div class="old-comment">
+                        <img src="images/Jack.png" alt="">
+                        <div>
+                            <h3>Conrad Bills <span>1 year ago</span></h3>
+                            <p>
+                                This is the content we stay subscribed for! Thank you avinash, 
+                                you're single handedly teaching millions of us how to do front end
+                            </p>
+                            <div class="comment-action">
+                                <img src="images/like.png" alt="">
+                                <span>244</span>
+                                <img src="images/dislike.png" alt="">
+                                <span>2</span>
+                                <span>REPLY</span>
+                                <a href="">All replies</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="old-comment">
+                        <img src="images/Jack.png" alt="">
+                        <div>
+                            <h3>Conrad Bills <span>1 year ago</span></h3>
+                            <p>
+                                This is the content we stay subscribed for! Thank you avinash, 
+                                you're single handedly teaching millions of us how to do front end
+                            </p>
+                            <div class="comment-action">
+                                <img src="images/like.png" alt="">
+                                <span>244</span>
+                                <img src="images/dislike.png" alt="">
+                                <span>2</span>
+                                <span>REPLY</span>
+                                <a href="">All replies</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="old-comment">
+                        <img src="images/thumbnail6.png" alt="">
+                        <div>
+                            <h3>Biggie Smalls <span>1 year ago</span></h3>
+                            <p>
+                                This is the content we stay subscribed for! Thank you avinash, 
+                                you're single handedly teaching millions of us how to do front end
+                            </p>
+                            <div class="comment-action">
+                                <img src="images/like.png" alt="">
+                                <span>244</span>
+                                <img src="images/dislike.png" alt="">
+                                <span>2</span>
+                                <span>REPLY</span>
+                                <a href="">All replies</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="right-sidebar">
+                <div class="side-video-list">
+                    <a href="" class="small-thumbnail"><img src="images/thumbnail1.png" alt=""></a>
+                    <div class="vid-info">
+                        <a href="">Best channel for fullstack development</a>
+                        <p>Richcodes Tutorial</p>
+                        <p><span>15k views</span> &bull; <span>4 days</span></p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href="" class="small-thumbnail"><img src="images/thumbnail1.png" alt=""></a>
+                    <div class="vid-info">
+                        <a href="">Best channel for fullstack development</a>
+                        <p>Richcodes Tutorial</p>
+                        <p><span>15k views</span> &bull; <span>4 days</span></p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href="" class="small-thumbnail"><img src="images/thumbnail1.png" alt=""></a>
+                    <div class="vid-info">
+                        <a href="">Best channel for fullstack development</a>
+                        <p>Richcodes Tutorial</p>
+                        <p><span>15k views</span> &bull; <span>4 days</span></p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href="" class="small-thumbnail"><img src="images/thumbnail1.png" alt=""></a>
+                    <div class="vid-info">
+                        <a href="">Best channel for fullstack development</a>
+                        <p>Richcodes Tutorial</p>
+                        <p><span>15k views</span> &bull; <span>4 days</span></p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href="" class="small-thumbnail"><img src="images/thumbnail1.png" alt=""></a>
+                    <div class="vid-info">
+                        <a href="">Best channel for fullstack development</a>
+                        <p>Richcodes Tutorial</p>
+                        <p><span>15k views</span> &bull; <span>4 days</span></p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href="" class="small-thumbnail"><img src="images/thumbnail1.png" alt=""></a>
+                    <div class="vid-info">
+                        <a href="">Best channel for fullstack development</a>
+                        <p>Richcodes Tutorial</p>
+                        <p><span>15k views</span> &bull; <span>4 days</span></p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href="" class="small-thumbnail"><img src="images/thumbnail1.png" alt=""></a>
+                    <div class="vid-info">
+                        <a href="">Best channel for fullstack development</a>
+                        <p>Richcodes Tutorial</p>
+                        <p><span>15k views</span> &bull; <span>4 days</span></p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href="" class="small-thumbnail"><img src="images/thumbnail1.png" alt=""></a>
+                    <div class="vid-info">
+                        <a href="">Best channel for fullstack development</a>
+                        <p>Richcodes Tutorial</p>
+                        <p><span>15k views</span> &bull; <span>4 days</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
