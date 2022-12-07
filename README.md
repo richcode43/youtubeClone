@@ -1,1 +1,1 @@
-This is a clone for the youtube official website with similiar functionalitiend pages
+This is a clone for the youtube official website with similiar functionalities and pages
