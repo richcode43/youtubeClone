@@ -4,36 +4,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="stylesheet/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="stylesheet/style.css">
 </head>
 <body>
     <nav class="flex-div">
         <div class="nav-left flex-div">
-            <img src="images/menu-icon.png" alt="" class="menu-icon">
+            <i class="bi bi-list menu-icon"></i>
             <a href="index.html" class="logo flex-div">
-                <i class="fa-2x fa-brands fa-youtube"></i>
-                <h1>Youtube<sup>NG</sup></h1>
+                <img src="images/YouTube-Logo.png" alt="" class="yt-logo">
+                <span>ng</span>
             </a>
         </div>
         <div class="nav-middle flex-div">
             <div class="search-box flex-div">
+                <i class="bi bi-search d-none"></i>
                 <input type="text" placeholder="Search">
-                <img src="images/search.png" alt="">
+                <div class="search" title="Browse">
+                    <i class="bi bi-search"></i>
+                </div>
             </div>
-            <img src="images/voice-search.png" alt="" class="mic-icon">
+            <i class="bi bi-mic-fill" title="Search with your voice"></i>
         </div>
         <div class="nav-right flex-div">
-            <img src="images/upload.png" alt="">
+            <i class="bi bi-camera-video hover"></i>
             <div class="notification">
-                <img src="images/notification.png" alt="">
-                <div class="badge">3</div>
+                <i class="bi bi-bell"></i>
+                <div class="badge">3+</div>
             </div>
             <img src="images/simon.png" alt="" class="user-icon">
         </div>
     </nav>
 
+    <!-- ----------sidebar toggled--------- -->
+    <div class="sidebar-toggle" id="mySideBar">
+        <div class="header">
+            <img src="images/list.svg" alt="" class="menu-icon closeSideBar">
+            <a href="">
+                <img src="images/YouTube-Logo.png" alt="">
+                <span>ng</span>
+            </a>
+        </div>
+       <div class="sidebar-contents">
+        <a href="index.html" class="active"><img src="images/history.png" alt=""><p>Home</p></a>
+        <a href="index.html" ><img src="images/youtube-shorts-logo-15252.svg" alt=""><p>shorts</p></a>
+        <a href="index.html"><img src="images/subscriprion.png" alt=""><p>Subscription</p></a>
+        <hr class="lineBreak">
+        <a href="index.html"><img src="images/history.png" alt=""><p>Library</p></a>
+        <a href="index.html"><img src="images/history.png" alt=""><p>History</p></a>
+        <a href="index.html"><img src="images/history.png" alt=""><p>Your Videos</p></a>
+        <a href="index.html"><img src="images/history.png" alt=""><p>Watch Later</p></a>
+        <a href="index.html"><img src="images/history.png" alt=""><p>movies</p></a>
+        <a href="index.html"><img src="images/history.png" alt=""><p>Show more</p></a>
+        <hr class="lineBreak">
+        <h3>Subscriptions</h3>
+        <div class="subscriptions">
+            <a href="index.html"><img src="images/simon.png" alt="" id="subscription-img"><p>Mizzyboy</p></a>
+            <a href="index.html"><img src="images/simon.png" alt="" id="subscription-img"><p>The Net Ninja</p></a>
+            <a href="index.html"><img src="images/history.png" alt=""><p>Your Videos</p></a>
+            <a href="index.html"><img src="images/history.png" alt=""><p>Show 87 more</p></a>
+        </div>
+        <hr class="lineBreak">
+        
+        <div class="explore">
+            <h3>Explore</h3>
+            <a href="index.html"><img src="images/history.png" alt=""><p>Trending</p></a>
+            <a href="index.html"><img src="images/history.png" alt=""><p>Music</p></a>
+            <a href="index.html"><img src="images/history.png" alt=""><p>Gaming</p></a>
+            <a href="index.html"><img src="images/history.png" alt=""><p>News</p></a>
+            <a href="index.html"><img src="images/history.png" alt=""><p>Sport</p></a>
+        </div>
+        
+        <hr class="lineBreak">
+        <h3>More from Youtube</h3>
+        <a href="index.html"><img src="images/history.png" alt=""><p>Youtube Premium</p></a>
+        <a href="index.html"><img src="images/history.png" alt=""><p>Creator Studio</p></a>
+        <a href="index.html"><img src="images/history.png" alt=""><p>Youtube Music</p></a>
+        <a href="index.html"><img src="images/history.png" alt=""><p>Youtube Kids</p></a>
+        <a href="index.html"><img src="images/history.png" alt=""><p>Youtube TV</p></a>
+        <hr class="lineBreak">
+        <a href="index.html"><img src="images/history.png" alt=""><p>Settings</p></a>
+        <a href="index.html"><img src="images/history.png" alt=""><p>Report history</p></a>
+        <a href="index.html"><img src="images/history.png" alt=""><p>Help</p></a>
+        <a href="index.html"><img src="images/history.png" alt=""><p>Send feedback</p></a>
+        <hr class="lineBreak">
+       </div>
+    </div>
+    
     <!-- ----------main---------- -->
     <div class="container play-container">
         <div class="row">
@@ -56,7 +114,7 @@
                             <p>700 subscribers</p>
                         </div>
                         <button class=" btn join-btn">join</button>
-                        <button class="btn subscribe-btn">subscribe</button>
+                        <button class="btn subscribe-btn">Subscribe</button>
                         <i class="fa-regular fa-bell"></i>
                     </div>
                     <div class="userActions">
@@ -64,7 +122,8 @@
                             <button class="btn likeBtn"><img src="images/like.png" alt=""><span>10k</span></button>
                             <button class="btn dislikeBtn"><img src="images/dislike.png" alt=""></button>
                         </div>
-                        <button class="btn shareBtn"><img src="images/share.png" alt=""><span>share</span></button>
+                        <button class="btn shareBtn"><img src="images/share.png" alt=""><span>Share</span></button>
+                        <button class="btn downloadBtn"><i class="bi bi-arrow-down"></i><span>Download</span></button>
                         <div class="icons"><i class="fa-solid fa-ellipsis"></i></div>
                     </div>
                 </div>
@@ -80,7 +139,16 @@
                     <h4>500 comments</h4>
                     <div class="add-comment">
                         <img src="images/Jack.png" alt="">
-                        <input type="text" placeholder="write comments...">
+                        <div class="reactions">
+                            <input type="text" placeholder="Add a comment...">
+                            <div class="comment-actions">
+                                <i class="bi bi-emoji-laughing"></i>
+                                <div class="action-btns">
+                                    <button>Cancel</button>
+                                    <button>Comment</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="old-comment">
                         <img src="images/Jack.png" alt="">
