@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
+   
 }
 a{
     text-decoration: none;
@@ -23,9 +24,7 @@ nav{
     position: sticky;
     top: 0;
     z-index: 10;
-
 }
-
 .nav-left{
     gap: 20px;
 }
@@ -38,13 +37,6 @@ nav{
     background-color: rgb(198,198,198);
     border-radius: 50%;
 }
-/* .nav-left .menu-icon{
-    width: 26px;
-    margin-right: 20px;
-} */
-/* .nav-left .logo{
-    position: relative;
-} */
 .nav-left .yt-logo{
     width: 130px;
     margin-left: -10px;
@@ -55,7 +47,6 @@ nav{
     position: relative;
     bottom: 10px;
     right: 10px;
-    /* right: -5px; */
     color: rgb(67, 67, 67);
 }
 .nav-middle .search-box{
@@ -96,7 +87,7 @@ nav{
 .nav-middle .bi-mic-fill {
     font-size: 20px;
     padding: 10px;
-    background-color: rgb(249,249,249);
+    background-color: rgb(162, 162, 162);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -112,11 +103,11 @@ nav{
 }
 .bi-camera-video:hover{
     border-radius: 50%;
-    background-color: rgb(229,229,229);
+    background-color: rgb(198,198,198);
 }
 .bi-bell:hover{
     border-radius: 50%;
-    background-color: rgb(229,229,229);
+    background-color: rgb(198,198,198);
 }
 .nav-right .user-icon{
     border-radius: 50%;
@@ -154,11 +145,11 @@ nav{
     align-items: center;
     margin-left: 100px;
     width: 100%;
-    overflow: hidden;
     background-color: white;
+    overflow: hidden;
+    overflow-x: auto;
 }
 .scroll-container a{
-    background-color: gray;
     text-decoration: none;
     padding: 10px 15px;
     white-space: nowrap;
@@ -166,6 +157,10 @@ nav{
     color:black;
     font-size: 14px;
     border-radius: 10px;  
+}
+.scroll-container a:nth-child(1){
+    background-color: black;
+    color: white;
 }
 /* ----------sidebar toggled---------- */
 .sidebar-contents::-webkit-scrollbar {
@@ -192,11 +187,12 @@ nav{
     left: 0;
     background: white;
     height: 100vh;
-    display: flex;
+    display: none;
     flex-direction: column;
     transition: .5s;
-    width: 0;
+    width: 250px;
     overflow: hidden;
+    
    
 }
 .sidebar-toggle .header{
@@ -205,10 +201,23 @@ nav{
     display: flex;
     align-items: center;
     gap: 12px;
-    display: none;
 }
-.sidebar-toggle .header .menu-icon{
-    width: 26px;
+.sidebar-toggle .header .bi-list{
+    font-size: 26px;
+    padding: 10px;
+    margin-left: 0 10px;
+}
+.sidebar-toggle .header .yt-logo{
+    width: 130px;
+    margin-left: -10px;
+}
+.sidebar-toggle .header .logo span{
+    text-transform: uppercase;
+    font-size: 10px;
+    position: relative;
+    bottom: 10px;
+    right: 10px;
+    color: rgb(67, 67, 67);
 }
 .sidebar-toggle .header a{
     position: relative;
@@ -216,14 +225,7 @@ nav{
 .sidebar-toggle .header a img{
     width: 130px;  
 }
-.sidebar-toggle .header a span{
-    text-transform: uppercase;
-    font-size: 10px;
-    position: absolute;
-    top: 31px;
-    right: -5px;
-    color: rgb(67, 67, 67);
-}
+
 .sidebar-toggle .sidebar-contents{
     padding: 20px 12px;
     overflow: hidden;
@@ -281,6 +283,8 @@ nav{
     width: 90%;
     border-top: 1px solid rgba(0,0,0,0.1);
 }
+/* ----------End sidebar toggled---------- */
+
 /* ----------sidebar---------- */
 .sidebar{
     width: 50px;
@@ -320,10 +324,11 @@ nav{
     color: black;
     border-radius: 10px;
 }
+/* ----------End of sidebar---------- */
 
-/* ----------main---------- */
+/* ----------main Index page---------- */
 .container{
-    padding: 10px 10px 20px 100px;
+    padding: 10px 30px 20px 100px;
     margin-top: 70px;
 }
 .banner{
@@ -365,12 +370,12 @@ nav{
     border-radius: 20px;
     font-size: 15px;
 }
-.bi-x-lg{
+.close-ad{
     color: white;
     position: absolute;
     top: 150px;
     font-size: 20px;
-    right: 30px;
+    right: 50px;
     padding: 10px;
     border-radius: 50%;
 }
@@ -397,22 +402,7 @@ nav{
     margin-right: 10px;
     border-radius: 50%;
 }
-.vid-info {
-    color: #5a5a5a;
-    font-size: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    padding-left: 8px;
-}
-.vid-info a{
-    color: black;
-    font-weight: 500;
-    display: block;
-    margin-bottom: 5px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: .93rem;
-}
+
 .container hr{
     margin-top: 20px;
     height: 5px;
@@ -421,19 +411,29 @@ nav{
     background-color: #eae8e8;
 }
 
-/* ---------- shorts ---------- */
+/* ---------- shorts section in Index page ---------- */
 .shorts-header{
     display: flex;
     justify-content: space-between;
-    margin: 24px 20px 24px;
+    margin: 20px 5px;
 }
-.shorts-header h2{
-    font-weight: 300;
+.shorts-logo{
+    height: 40px;
+}
+.shorts-header .close-shorts{
+    font-size: 20px;
+    padding: 10px;
+    position: relative;
+    top: -5px;
+}
+.shorts-header .close-shorts:hover{
+    border-radius: 50%;
+    background: rgba(172, 171, 171, 0.451);
 }
 .shorts-container{
     display: flex;
     overflow: auto;
-    padding: 10px;
+    padding: 5px;
     gap: 15px;
 }
 .shorts-container::-webkit-scrollbar {
@@ -483,6 +483,8 @@ nav{
 .moreShortsBtn:hover{
     background-color: #eae8e8;
 }
+/* ----------End shorts section in Index page and Index page---------- */
+
 /* ----------media queries for index page--------- */
 @media (max-width:900px){
     .nav-left .menu-icon{
@@ -491,15 +493,16 @@ nav{
     .sidebar{
         display: none;
     }
-    .container{
-        padding: 2%;
-    }
     .nav-right img{
         display: none;
     }
     .nav-right .user-icon{
         display: block;
-        width: 30px;
+        width: 35px;
+        margin-right: 15px;
+    }
+    .nav-middle{
+        margin-left: 25px;
     }
     .nav-middle .search-box{
         border: 0;
@@ -507,8 +510,21 @@ nav{
     .nav-middle .search-box input{
         display: none;
     }
-    .nav-middle .search-box img{
-        margin-left:150px;
+    .search-box .search{
+        background-color: transparent;
+        margin-right: 0px;
+        border: none;
+    }
+    .search-icon{
+        margin-right: -60px;
+        padding: 12px;
+    }
+    .search-icon:hover{
+        border-radius: 50%;
+        background-color: rgb(198,198,198);
+    }
+    .nav-middle .bi-mic-fill{
+        background-color: white;
     }
     .notification .badge{
         display: none;
@@ -516,16 +532,32 @@ nav{
     .nav-middle .mic-icon{
         display: none;
     }
-    .logo h1{
-        font-size: 20px;
+    .container{
+        padding: 2% !important;
+        /* padding-left: 20px; */
+    }
+    .vid-list{
+        width: 100%;
     }
     .list-container{
-        gap: 20px;
+        /* gap: 20px; */
+        width: 100%;
+        padding: 0 !important;
     }
     .moreShortsBtn{
         display: none;
     }
+    .scroll-container{
+        margin-left: 0px;
+        padding-left: 10px;
+        margin-top: -2px;
+    }
+    .close-ad{
+        right: 30px;
+    }
 }
+/* ----------end of media queries for index page--------- */ 
+
 /* ---------- play video page ---------- */
 .play-container{
     padding-left: 2%;
@@ -542,22 +574,55 @@ nav{
 .right-sidebar{
     flex-basis: 34%;
 }
+.right-sidebar .mini-scroll{
+  display: flex;
+  overflow-x: scroll;
+  width: 50%;
+  margin-bottom: 30px;
+}
+.right-sidebar ,.mini-scroll a{
+    white-space: nowrap;
+    text-decoration: none;
+    /* padding: 10px 15px; */
+    white-space: nowrap;
+    color:black;
+    font-size: 14px;
+    border-radius: 10px; 
+}
+.right-sidebar .mini-scroll::-webkit-scrollbar {
+    display: none;
+}
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
 .play-video video{
     width: 100%;
 }
 .side-video-list{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 .side-video-list img{
     width: 100%;
+    border-radius: 10px;
 }
-.side-video-list .small-thumbnail{
-    flex-basis: 49%;
+.vid-info {
+    color: #5a5a5a;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding-left: 8px;
 }
-.side-video-list .vid-info{
-    flex-basis: 49%;
+
+.vid-info a{
+    color: black;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: .93rem;
 }
 .play-video .tags{
     margin-top: 10px;
@@ -616,6 +681,7 @@ nav{
     margin-bottom: 10px;
 }
 .userActions .btnHolder{
+    display: flex;
     border-radius: 20px;
     background: #f0f0f0;
     width: auto;
@@ -719,10 +785,8 @@ nav{
     border: 0;
     outline: 0;
     border-bottom: 1px solid #ccc;
-    /* padding-top: 10px; */
     width: 100%;
     background: transparent;
-    /* margin-top: 10px; */
     padding-bottom: 6px;
 }
 .add-comment input::placeholder{
@@ -807,6 +871,8 @@ nav{
 .old-comment .comment-action a{
     color: #0000ff;
 }
+/* ----------End of play video page--------- */
+
 /* ----------media queries for playVideo page---------- */
 @media (max-width: 900px){
     .row{
@@ -814,6 +880,9 @@ nav{
     }
     .play-video-info{
         flex-direction: column;
+    }
+    .btnHolder {
+        width: 10px;
     }
     .comments{
         display: none;
@@ -831,3 +900,4 @@ nav{
         display: block;
     }
 }
+/* ----------end of media queries for playVideo page---------- */

@@ -1,19 +1,24 @@
-let openBar = document.querySelector('.openSideBar');
+let openBar = document.querySelector('.menu-icon');
 let closeBar = document.querySelector('.closeSideBar');
-let mainBar = document.getElementById("mySideBar");
-let sideHeader = document.querySelector('.header');
+let sideBar = document.querySelector('.sidebar-toggle');
+
 let closeAd = document.querySelector('.close-ad');
 let advert = document.querySelector('.banner');
+let closeShorts = document.querySelector('.close-shorts');
+let shortsContainer = document.getElementById('shorts');
 
 
 closeAd.addEventListener('click', function(){
     advert.style.display = 'none';
-    // advert.innerHTML = '<style>' + '.banner{display:none;}' + '</style>';
 })
 openBar.addEventListener('click',function(){
-    mainBar.style.width = "250px";
+    sideBar.style.display = "flex";
+    // document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 })
 closeBar.addEventListener('click',function(){
-    mainBar.style.width ='0';
-    sideHeader.style.display = "none";
+    sideBar.style.display = "none";
 })
+closeShorts.addEventListener('click', function(){
+    shortsContainer.style.display = 'none';
+})
+
