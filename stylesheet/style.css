@@ -91,6 +91,7 @@ nav{
     border-radius: 50%;
     cursor: pointer;
 }
+
 .nav-middle .bi-mic-fill:hover{
     background-color: rgb(198,198,198);
 }
@@ -347,9 +348,6 @@ nav{
     background-position-x: 100px;
     background-size: 100%;
 }
-.ad-img{
-    width: 400px;
-}
 .ad-text p{
     color: white;
     font-weight: 700;
@@ -386,7 +384,7 @@ nav{
 .list-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 50px 15px;
+    gap: 40px 15px;
     margin-top: 15px;
 }
 .vid-list .thumbnail{
@@ -493,7 +491,7 @@ nav{
     .sidebar{
         display: none;
     }
-    .nav-right img{
+    .nav-right{
         display: none;
     }
     .nav-right .user-icon{
@@ -514,6 +512,7 @@ nav{
         background-color: transparent;
         margin-right: 0px;
         border: none;
+        width: fit-content;
     }
     .search-icon{
         margin-right: -60px;
@@ -524,7 +523,7 @@ nav{
         background-color: rgb(198,198,198);
     }
     .nav-middle .bi-mic-fill{
-        background-color: white;
+        display: none;
     }
     .notification .badge{
         display: none;
@@ -532,17 +531,20 @@ nav{
     .nav-middle .mic-icon{
         display: none;
     }
-    .container{
-        padding: 2% !important;
-        /* padding-left: 20px; */
+    .nav-middle .bi-search{
+        font-size: 20px;
+        margin-right: -20px;
     }
+    .container{
+        padding: 0;
+    }
+    
     .vid-list{
         width: 100%;
     }
     .list-container{
-        /* gap: 20px; */
         width: 100%;
-        padding: 0 !important;
+        gap: 10px;
     }
     .moreShortsBtn{
         display: none;
@@ -552,6 +554,11 @@ nav{
         padding-left: 10px;
         margin-top: -2px;
     }
+    .ad-text{
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: 100% 100%;
+    }
     .close-ad{
         right: 30px;
     }
@@ -560,19 +567,22 @@ nav{
 
 /* ---------- play video page ---------- */
 .play-container{
-    padding-left: 2%;
+    /* padding-left: 2%; */
+    padding: 20px;
     margin-top: 10px;
 }
 .row{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
+    gap: 20px;
 }
 .play-video{
     flex-basis: 64%;
 }
 .right-sidebar{
-    flex-basis: 34%;
+    flex-basis: 30%;
+    
 }
 .right-sidebar .mini-scroll{
   display: flex;
@@ -600,11 +610,12 @@ nav{
 }
 .side-video-list{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     margin-bottom: 10px;
+    
 }
 .side-video-list img{
-    width: 100%;
+    width: 160px;
     border-radius: 10px;
 }
 .vid-info {
@@ -623,6 +634,8 @@ nav{
     margin-bottom: 5px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: .93rem;
+    font-family: "Roboto","Arial",sans-serif;
+    
 }
 .play-video .tags{
     margin-top: 10px;
@@ -875,14 +888,44 @@ nav{
 
 /* ----------media queries for playVideo page---------- */
 @media (max-width: 900px){
+    .play-container{
+        padding: 0;
+    }
+    .tags,h3, .publisher{
+        padding: 3px 10px;
+    }
+    .userActions{
+        padding: 3px 10px;
+        /* overflow: scroll; */
+    }
     .row{
         flex-direction: column;
     }
+    .side-video-list{
+        flex-direction: column;
+    }
+    .side-video-list img{
+        width: 100%;
+        border-radius:0;
+    }
+    .vid-info{
+        /* padding: 10px 60px 15px; */
+    }
+    .play-video{
+        flex-basis: 0;
+    }
+    
     .play-video-info{
         flex-direction: column;
     }
     .btnHolder {
         width: 10px;
+    }
+    .join-btn{
+        display: none;
+    }
+    .subscribe-btn{
+        margin-left: 90px;
     }
     .comments{
         display: none;
@@ -899,5 +942,9 @@ nav{
     .userActions .downloadBtn{
         display: block;
     }
+    .bi-mic-fill, .bi-camera-video{
+        display: none;
+    }
+    
 }
 /* ----------end of media queries for playVideo page---------- */
